@@ -6,7 +6,10 @@ on:
   branches: main
 jobs:
  build:
-   runs-on: windows-latest
+   runs-on: ${{matrix.os}}
+   strategy:
+     matrix:
+       os: [ubuntu-latest, macOS-latest, windows-latest]
    steps:
      - name: Checking the code
        uses: actions/checkout@v4
