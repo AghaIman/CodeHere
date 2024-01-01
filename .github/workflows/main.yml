@@ -9,7 +9,7 @@ jobs:
    runs-on: windows-latest
    steps:
      - name: Checking the code
-       uses: action/checkout@v4
+       uses: actions/checkout@v4
      - name: Language Setup
        uses: actions/setup-node@v4
        with:
