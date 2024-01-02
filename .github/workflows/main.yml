@@ -18,6 +18,8 @@ jobs:
        with:
           node-version: 18
      - run: npm ci
+     - name: Set up Docker
+       uses: docker/setup-docker@v2
      - uses: mr-smithers-excellent/docker-build-push@v6
        name: Build & push Docker image
        with:
