@@ -1,0 +1,24 @@
+name: MyFirstWorkflow
+on: 
+ push:
+  branches: main
+ pull_request:
+  branches: main
+jobs:
+ build:
+   runs-on: ${{matrix.os}}
+   strategy:
+     matrix:
+       os: [ubuntu-latest, macOS-latest, windows-latest]
+   steps:
+     - name: Checking the code
+       uses: actions/checkout@v4
+     - name: Language Setup
+       uses: actions/setup-node@v4
+       with:
+          node-version: 18
+     - run: npm ci
+      
+  
+     
+  
