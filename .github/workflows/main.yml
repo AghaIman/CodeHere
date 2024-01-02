@@ -25,8 +25,8 @@ jobs:
         tags: v1, latest
         registry: docker.io/imanagha/test
         dockerfile: src/Dockerfile
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        username: imanagha
+        password: AmanAgha786$
       
   
      
